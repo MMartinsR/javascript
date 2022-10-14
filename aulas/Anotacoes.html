@@ -1,4 +1,4 @@
-<!-- Aula04 - ex001 - Primeiro Script, alert, variáveis
+<!-- Aula04 - Ex001 - Primeiro Script, alert, variáveis
 
     Referências:
     https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript
@@ -67,12 +67,12 @@
     -> Conseguimos usar o typeof com qualquer valor ou variável, incluindo object, function, undefined, NaN e Infinity.
 -->
 
-<!-- Ex002 - Usando variáveis, comando prompt, alert
+<!-- Aula06 - Ex002 - Usando variáveis, comando prompt, alert
     -> Usando variáveis para receber o resultado que será obtido pelo comando prompt
         -> var nome = window.prompt('Qual seu nome?')
 -->
 
-<!-- Ex003 - Tratamento de dados
+<!-- Aula06 - Ex003 - Tratamento de dados
     -> Para diferenciar o + da adição e da concatenação:
         -> number + number = adição
         -> string + string = concatenação
@@ -110,7 +110,22 @@
        -> s.toLowerCase() 
 -->
 
-
+<!-- Aula06 - Ex004 - Outros comandos com string
+    -> Comando usado para escrever na tela:
+        -> document.write(string)
+    -> Podemos usar tags html dentro do método write.
+        -> document.write(`<h2>Seu nome tem ${nome.length} letras.</h2>`)
+    -> Podemos aplicar estilos CSS a esse comando, para formatar, em vez de usar o html.
+    -> Podemos colocar em negrito, usando o <strong>
+    -> Podemos usar o método toFixed(valor) para formatar um valor com mais casas decimais.
+        -> numero1.toFixed(2) -> 1545.50
+    -> Para trocar o . pela , usamos o método replace:
+        -> numero1.toFixed(2).replace('.',',') -> 1545,50
+    -> Podemos ainda localizar a string com as regras de um determinado lugar:
+        -> numero1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> R$ 1.545,50
+        -> numero1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) -> US$ 1.545.50
+        -> numero1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) -> € 1.545.50
+-->
 
 
 
