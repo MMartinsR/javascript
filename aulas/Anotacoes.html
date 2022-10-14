@@ -1,4 +1,10 @@
 <!-- Aula04 - ex001 - Primeiro Script, alert, variáveis
+
+    Referências:
+    https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript
+    https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
+    https://262.ecma-international.org/6.0/
+
     -> Criamos um script através da tag script, e dentro dele colocamos nosso código JavaScript.
 
     -> Comando usado para criar uma mensagem de alerta no navegador:
@@ -60,4 +66,69 @@
 
     -> Conseguimos usar o typeof com qualquer valor ou variável, incluindo object, function, undefined, NaN e Infinity.
 -->
+
+<!-- Ex002 - Usando variáveis, comando prompt, alert
+    -> Usando variáveis para receber o resultado que será obtido pelo comando prompt
+        -> var nome = window.prompt('Qual seu nome?')
+-->
+
+<!-- Ex003 - Tratamento de dados
+    -> Para diferenciar o + da adição e da concatenação:
+        -> number + number = adição
+        -> string + string = concatenação
+    -> O window.prompt encara os valores passados a ele como strings, logo, ele concatena, mesmo que sejam valores númericos.
+    -> Para que esses valores, recebidos do prompt sejam encarados como number, devemos converter seus valores para number, usando:
+        -> Number.parseInt(variavel) ou parseInt(variavel) <- número inteiro
+        -> Number.parseFloat(variavel) ou parseFloat(variavel) <- número real
+    -> Logo, tinhamos:
+        -> window.prompt('Digite um número: ')
+        -> window.prompt('Digite outro número: ')
+    -> E teremos, para converter:
+        -> Number.parseInt(window.prompt('Digite um número: '))
+        -> Number.parseInt(window.prompt('Digite outro número: '))
+    -> Temos agora uma forma mais intuitiva de fazer essa conversão, onde o javascript define qual será o tipo de conversão necessária, usando simplesmente:
+        -> Number(variavel)
+        -> Number(window.prompt('Digite outro número: '))
+    
+    -> Vamos agora, converter de number para string, temos duas formas:
+        -> String(variavel)
+        -> variavel.toString()
+            -> window.alert('A soma dos valores é ' + String(soma))
+
+    -> Vamos ver formatação de string:
+        -> Método da concatenação:
+            -> 'A aluna ' + nome + ' com ' + idade + ' anos, tirou a nota ' + nota
+        -> Método da interpolação:
+            -> Primeiro, nesse método usamos a crase como delimitar do template string, ou formatador de string. Sua sintax ficaria:
+                -> `Eu estou aprendendo ${s}`
+                -> `A aluna ${nome}, com ${idade} anos, tirou a nota ${nota}`
+                -> `A soma entre ${numero1} e ${numero2} é igual a ${String(soma)}`
+    
+    -> Outros comandos com string
+       -> s.length
+       -> s.toUpperCase()
+       -> s.toLowerCase() 
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
