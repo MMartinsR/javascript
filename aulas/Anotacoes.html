@@ -127,6 +127,88 @@
         -> numero1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) -> € 1.545.50
 -->
 
+<!-- Aula06 - Operadores
+    -> No console do node...>
+    Operadores Aritméticos:
+    + , - , / , * , % , ** (potênciação)
+    5 + 2  -> 7
+    5 - 2  -> 3
+    5 / 2  -> 2.5
+    5 * 2  -> 10
+    5 % 2  -> 1
+    5 ** 2 -> 25
+
+    Ordem de precedência: (do executado primeiro pro executado por último)
+    () 
+    **
+    * , / , %
+    + , -
+    (5 + 3) / 2 -> 4
+    5 + 3 / 2 -> 6.5
+
+    Operador de atribuição:
+    var a = 5 + 3  (var a recebe 8)
+    var b = a % 5  (var b recebe 8 % 5, que resulta em 3, resto da divisão)
+    var c = 5 * b ** 2 (var c recebe 3 elevado a 2, = 9 * 5 = 45)
+    var d = 10 - a / 2 (var d recebe 8 / 2 = 4 - 10 = 6)
+    var e = 6 * 2 / d (var e recebe 6 * 2 = 12 / 6 = 2)
+    var f = b % e + 4 / e (var f recebe 3 % 2 = 1, 4 / 2 = 2 + 1 = 3)
+
+    Auto-atribuições     ->     Simplificando
+    var n = 3 -> 3              Atribuição simples
+    n = n + 4 -> 7              n += 4
+    n = n - 5 -> 2              n -= 5
+    n = n * 4 -> 8              n *= 4
+    n = n / 2 -> 4              n /= 2
+    n = n ** 2 -> 16            n **= 2
+    n = n % 5 -> 1              n %= 5
+
+    Auto-atribuições   ->   Simplificando     ->    Incremento/decremento
+    var x = 5               Atribuição Simples      Atribuição Simples   
+    x = x + 1               x += 1                  x++  ou  ++x
+    x = x - 1               x -= 1                  x--  ou  --x   
+
+    Operadores relacionais:
+    > , < , >= , <= , == , !=
+    5 > 2  -> true
+    7 < 4  -> false
+    8 >= 8 -> true
+    9 <= 7 -> false
+    5 == 5 -> true
+    4 != 4 -> false
+
+    Operadores relacionais de identidade:
+    5 == 5 -> true
+    5 == '5' -> true (== não testa tipo)
+
+    Operador de igualdade restrita:
+    5 === '5' false (=== testa valor e tipo igual)
+    5 === 5 true
+    5 != '5' false
+    5 !== '5' true (!== desigual restrito)
+
+    Operadores lógicos
+    !  -> NOT
+    && -> AND
+    || -> OR
+
+    Ordem de precedência dos operadores:
+    1. Operadores aritméticos,  
+    2. Operadores relacionais,
+    3. Operadores lógicos.
+
+    Ordem de precedência dos operadores lógicos:
+    ! , && e ||
+
+    Operador ternário
+    ? :
+    teste ? true : false
+    true/false test ? if true : if false
+    media >= 7.0 ? "Aprovado" : "Reprovado"
+-->
+
+
+
 
 
 
