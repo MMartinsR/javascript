@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula06 - Ex005 - DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<!-- Aula06 - Ex005 - DOM
+    -> DOM - Document Object Model, modelo de objetos para documento.
+
+    -> Árvore DOM
+        -> A árvore DOM começa da raíz, e esta raíz é chamada de window. Tudo dentro do javascript está dentro desta janela.
+        -> Desta raíz temos, o location, o document e o history
+            -> o Location diz qual a url, página atual, anterior;
+            -> o Document diz qual o documento atual;
+                -> dentro de document, temos o objeto html, que é a parte html do nosso site.
+                    -> dentro de html temos, o head e o body (filhos de html)
+                        -> dentro de head temos, por exemplo, meta, title, style
+                        -> dentro do body temos, no nosso exemplo, h1, p, p, div
+                            -> Dentro do segundo paragrafo temos, strong
+            -> o History guarda a navegação do seu site, de onde você veio para onde vai.
+    
+    -> Podemos, através de comandos, escrever na tela, buscar configurações da página, etc:
+        -> window.document.write('Olá Mundo!')
+        -> window.document.write(window.document.charset)
+        -> window.document.write(window.navigator.appName)
+        -> window.document.write(window.document.URL)
+    
+    -> Podemos selecionar elementos, para navegar dentro deles. Os métodos de acesso são:
+        -> por Marca (tag)
+            -> Estamos selecionando o PRIMEIRO elemento p do documento html, porque senão o comando pega todos.
+                -> var p1 = document.getElementsByTagName('p')[0]
+            -> Escrevemos o texto que temos dentro dele, através do innerText:
+                -> document.write(p1.innerText)
+                -> document.write(`Está escrito assim: ${p1.innerText}`)
+            -> Podemos ainda mudar o estilo desse elemento que está selecionado:
+                -> p1.style.color = 'blue'
+            -> Podemos aplicar um seletor a uma variável para fazer alterações nesse posteriormente.
+                -> var corpo = window.document.body
+                -> corpo.style.background = 'black'
+            -> O atributo innerHTML traz com ele não só o texto do elemento (innerText), mas também qualquer configuração, como por exemplo o strong que temos no parágrafo 2:
+                -> document.write(p1.innerHTML)
+                -> window.alert(p1.innerHTML)             
+
+        -> por ID (iD)
+            -> Podemos dar um id ao elemento que queremos modificar e manipulá-lo de várias formas:
+                -> <div id="msg">Clique em mim!</div>
+                -> var i = window.document.getElementById('msg')
+                -> i.style.background = 'green'
+                -> i.innerText = 'Estou aguardando...'
+            -> Podemos ainda fazer o comando diretamente:
+                -> var i = window.document.getElementById('msg').innerText = 'Olá!'
+
+        -> por Nome (name)
+            -> Por nome é parecido com o id, mas temos que ter cuidado de especificar qual name queremos alterar, através do [] e o indice, como o tagName.
+                -> <div name="msg">Clique em mim!</div>
+                -> var n = window.document.getElementsByName('msg')[0]
+                -> n.innerText = 'Olá'
+        -> por Classe (class)
+            -> Por classe também está no plural, tendo que usar o [] e o indice do elemento:
+                -> <div class="msg">Clique em mim!</div>
+                -> var c = window.document.getElementsByClassName('msg')[0] 
+        -> por Seletor (selector)
+            -> Por seletor é um pouco diferente, por podemos usar a sintaxe do css dentro dos parênteses, além claro, do modo normal:
+                -> <div id="msg">Clique em mim!</div> 
+                -> var s = window.document.querySelector('div#msg') ou
+                -> <div class="msg">Clique em mim!</div>
+                -> var s = window.document.querySelector('div.msg')
+    -> Lembrando que podemos ocultar o window, na chamada dos elementos.
+
+    -> Eventos DOM
+-->
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">Clique em mim!</div>
+    <script>        
+        /* byTagName
+        var corpo = window.document.body 
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write(`Está escrito assim: ${p1.innerText}`)
+        p1.style.color = 'blue'
+        corpo.style.background = 'black'
+        document.write(p1.innerHTML) 
+        */
+
+        /* byId
+        var i = window.document.getElementById('msg').innerText = 'Olá!'
+        i.style.background = 'green'
+        */
+
+        /* byName
+        var n = window.document.getElementsByName('msg')[0]
+        n.innerText = 'Olá' 
+        */
+        
+        /* byClassName
+        var c = window.document.getElementsByClassName('msg')[0] 
+        */
+        
+        var s = window.document.querySelector('div.msg')
+        s.style.background = 'blue'
+    </script>
+</body>
+</html>
