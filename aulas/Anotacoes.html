@@ -207,7 +207,7 @@
     media >= 7.0 ? "Aprovado" : "Reprovado"
 -->
 
-<!-- Aula06 - Ex005 - DOM
+<!-- Aula09 - Ex005 - DOM
     -> DOM - Document Object Model, modelo de objetos para documento.
 
     -> Árvore DOM
@@ -273,7 +273,36 @@
     
 -->
 
+<!-- Aula10 - Ex006 - Eventos DOM
+    -> Eventos DOM - https://developer.mozilla.org/en-US/docs/Web/Events#event_listing
+        -> mouseenter/mouseout -> ativa movendo o mouse para dentro/ para fora da div
+        -> mouseover -> ativa movendo o mouse para dentro e para fora da div
+        -> mousemove -> ativa movendo o mouse dentro da div
+        -> mousedown -> ativa quando clicamos e seguramos o mouse clicado dentro da div
+        -> mouseup -> ativa quando soltamos o clique do mouse dentro da div
+        -> click -> ativa quando clicamos e soltamos rapidamente o mouse dentro da div
+    
+    -> InnerText - muda apenas o texto
+    -> InnerHTML - pode aplicar tags html também
+    
+    -> Podemos disparar os eventos de dentro do HTML ou de dentro do javascript:
+        -> <div id="area" onclick="clicar()"> -> HTML
+        -> <script>
+                function clicar() {
+                    var area = window.document.getElementById('area')
+                    area.innerText = 'Clicou!'
+                    area.style.background = 'red'
+                }
+            </script>
 
+    -> Para disparar os eventos a partir do javascript, criamos um listener, que vai ficar prestando atenção ao algum evento:
+        -> area.addEventListener('click', clicar) <- 'evento', nome_funcao_sem_parenteses.
+        -> area.addEventListener('mouseenter', entrar)    
+-->
+
+<!-- Aula 10 - Ex007 - Somando Números
+
+-->
 
 
 
