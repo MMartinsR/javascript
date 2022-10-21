@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula11 - Ex011 - Condições</title>
+    <style>
+        body {
+            font: normal 1.2em Arial;
+        }
+
+        input#itxtPais {
+            width: 100px;
+        }
+
+        div#txtNacional {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    País de orígem <input type="text" name="txtPais" id="itxtPais">
+
+    <div id="txtNacional"></div>
+    
+    <script>
+            var paisOrigem = document.getElementById('itxtPais')
+            var nacionalidade = document.getElementById('txtNacional')
+            paisOrigem.addEventListener('change', validaNacionalidade) 
+
+        function validaNacionalidade() { 
+            nacionalidade.innerHTML = `Nascido no(a) ${paisOrigem.value} você é `
+            if (paisOrigem.value === 'Brasil') {
+                nacionalidade.innerHTML += `<strong> Brasileiro(a)!</strong>`
+            } else {
+                nacionalidade.innerHTML += `<strong>Estrangeiro(a)!</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
